@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Reset */
-body, h1, h2, h3, p {
+body, h1, h2, h3, p, input {
   margin: 0;
 }
 
@@ -36,7 +36,7 @@ main {
   align-items: center;
   height: 63px;
 }
-.header .header__img {
+.header__logo {
   width: 162px;
   height: 44px;
 }
@@ -51,7 +51,7 @@ main {
   width: 100%;
   height: 50px;
 }
-.location .location__input {
+.location__input {
   background: none;
   border: none;
   font-size: 1em;
@@ -73,18 +73,18 @@ main {
   height: 287px;
   gap: 20px;
 }
-.heading .heading__title {
+.heading__title {
   font-size: 1.5em;
   font-weight: 700;
   width: 75%;
   text-align: center;
 }
-.heading .heading__text {
+.heading__text {
   text-align: center;
   font-size: 1.125em;
   font-weight: 300;
 }
-.heading .heading__button {
+.heading__button {
   background: var(--Button-Gradient, linear-gradient(357deg, #9356DC -11.44%, #FF79DA 123.93%));
   font-size: 1em;
   font-weight: 500;
@@ -95,25 +95,36 @@ main {
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
+.heading__button:hover {
+  filter: brightness(1.12);
+  transition: all 1s ease-out;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
 
 /* Step */
 .step {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   width: 100%;
-  height: 440px;
+  height: 400px;
+  gap: 25px;
+  padding-top: 50px;
 }
-.step .step__title {
+.step__title {
   padding-left: 20px;
 }
-.step .step__card {
+.step__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.step__list__card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.step .step__card .step__card__num {
+.step__list__card__num {
   background-color: var(--main-color);
   color: #FFFFFF;
   display: flex;
@@ -127,23 +138,25 @@ main {
   margin-right: -12px;
   z-index: 1;
 }
-.step .step__card .step__card__div { /* Finir l'espacement entre le num, l'icon, le text */
+.step__list__card__container {
   background-color: var(--background-color);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 25px;
   border-radius: 20px;
   width: 322px;
   height: 72px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.step .step__card .step__card__div .step__card__div__icon {
+.step__list__card__container__icon {
   color: #7E7E7E;
+  padding-left: 30px;
 }
-.step .step__card .step__card__div .step__card__div__icon--purple { /* Verifier si il y a possibilité de faire sans refaire une nouvelle classe */
+.step__list__card__container__icon--purple { /* Verifier si il y a possibilité de faire sans refaire une nouvelle classe */
   color: var(--main-color);
+  padding-left: 30px;
 }
-.step .step__card .step__card__div .step__card__div__text {
+.step__list__card__container__text {
   font-size: 1em;
   font-weight: 500;
 }
@@ -155,54 +168,99 @@ main {
   gap: 24px;
   padding-bottom: 60px;
 }
-.restaurants .restaurants__title {
+.restaurants__title {
   font-size: 1.5em;
   font-weight: 700;
   padding: 50px 0 0 20px;
 }
-.restaurants .restaurants__div {
+.restaurants__list {
   display: flex;
   flex-direction: column;
   gap: 18px;
   padding: 0 18px;
 }
-.restaurants .restaurants__div .restaurants__div__article {
+.restaurants__list__card {
   background-color: #FFFFFF;
+  position: relative;
   border-radius: 15px;
   height: 251px;
   width: 340px;
 }
-.restaurants .restaurants__div .restaurants__div__article .restaurants__div__article__link {
+.restaurants__list__card__link {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.restaurants .restaurants__div .restaurants__div__article .restaurants__div__article__link .restaurants__div__article__link__img {
+.restaurants__list__card__link__img {
   border-radius: 15px 15px 0 0;
   height: 174px;
   object-fit: cover;
-  object-position: 100% 60%; /* Pas trop compris le fonctionnement de ceci */
+  object-position: bottom;
 }
-.restaurants .restaurants__div .restaurants__div__article .restaurants__div__article__link .restaurants__div__article__link__div {
+.restaurants__list__card__link__new {
+  background-color: var(--tertiary-color);
+  color: #008766;
+  font-size: 0.875em;
+  font-weight: 500;
+  position: absolute;
+  padding: 5px 12px;
+  border-radius: 2px;
+  top: 7%;
+  right: 4%;
+}
+.restaurants__list__card__link__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   padding: 0 25px 0 13px;
 }
-.restaurants .restaurants__div .restaurants__div__article .restaurants__div__article__link .restaurants__div__article__link__div .restaurants__div__article__link__div__div {
+.restaurants__list__card__link__container__textbox {
   display: flex;
   flex-direction: column;
 }
-.restaurants .restaurants__div .restaurants__div__article .restaurants__div__article__link .restaurants__div__article__link__div .restaurants__div__article__link__div__div .restaurants__div__article__link__div__div__title {
+.restaurants__list__card__link__container__textbox__title {
   font-size: 1.125em;
   font-weight: 700;
 }
-.restaurants .restaurants__div .restaurants__div__article .restaurants__div__article__link .restaurants__div__article__link__div .restaurants__div__article__link__div__div .restaurants__div__article__link__div__div__text {
+.restaurants__list__card__link__container__textbox__text {
   font-size: 1.063em;
   font-weight: 300;
 }
-.restaurants .restaurants__div .restaurants__div__article .restaurants__div__article__link .restaurants__div__article__link__div .restaurants__div__article__link__div__icon { /* Faire en sorte que les icon passent au dessus des cartes */ }
+.restaurants__list__card__emptyheart {
+  position: absolute;
+  right: 19px;
+  bottom: 29px;
+}
+.restaurants__list__card__heart {
+  position: absolute;
+  right: 19px;
+  bottom: 29px;
+  height: 21px;
+  width: 23px;
+  z-index: 5;
+  opacity: 0;
+}
+.restaurants__list__card__heart:checked + .restaurants__list__card__heart__full {
+  animation: fill 300ms ease both;
+}
+@keyframes fill {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1.05;
+    opacity: 1;
+  }
+}
+.restaurants__list__card__heart__full {
+  width: 23px;
+  height: 21px;
+  opacity: 0;
+  position: absolute;
+  right: 19px;
+  bottom: 29px;
+}
 
 /* Footer */
 .footer {
@@ -212,48 +270,48 @@ main {
   padding: 22px;
   gap: 16px;
 }
-.footer .footer__title {
+.footer__title {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.125em;
   font-weight: 400;
   color: #FFFFFF;
 }
-.footer .footer__div {
+.footer__list {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-.footer .footer__div .footer__div__div {
+.footer__list__container {
   display: flex;
   gap: 11px;
 }
-.footer .footer__div .footer__div__div .footer__div__div__icon {
+.footer__list__container__icon {
   display: flex;
   align-items: center;
   font-size: 14px;
   color: #FFFFFF;
 }
-.footer .footer__div .footer__div__div .footer__div__div__link {
+.footer__list__container__link {
   font-size: 1em;
   font-weight: 500;
   color: #FFFFFF;
 }
-.footer .footer__div .footer__div__div2 {
+.footer__list__container2 {
   display: flex;
   gap: 11px;
 }
-.footer .footer__div .footer__div__div2 .footer__div__div2__icon {
+.footer__list__container2__icon {
   display: flex;
   align-items: center;
   font-size: 10px;
   color: #FFFFFF;
 }
-.footer .footer__div .footer__div__div2 .footer__div__div2__link {
+.footer__list__container2__link {
   font-size: 1em;
   font-weight: 500;
   color: #FFFFFF;
 }
-.footer .footer__div .footer__div__link {
+.footer__list__link {
   display: flex;
   flex-direction: column;
   font-size: 1em;

@@ -5,105 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
-    <link href="assets/css/menu.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/menu.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/91eb157ec0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <!-- Ajouter la fleche pour retourner sur la page index, le menu est-il une popup? Ou bien une nouvelle page ouverte? -->
-        <img src="../assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+    <header class="header">
+        <a class="header__arrow" href="../index.html">
+            <img src="../assets/images/icons/ReturnArrow.svg">   <!-- Ajouter la fleche pour retourner sur la page index, le menu est-il une popup? Ou bien une nouvelle page ouverte? -->
+        </a>
+        <img class="header__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
     </header>
 
-    <main>  <!-- Ne pas oublier d'ajouter le coeur-->
-        <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">   <!-- Entête image -->
-        <section>   <!-- Le menu -->
-            <h1>La palette du goût</h1>
-            <article>
-                <h2>Entrées</h2>
-                <div>
-                    <h3>Fricassée d'escargots</h3>
-                    <div>
-                        <p>Au piment d'Espelette</p>
-                        <p>25€</p>
+    <main>  <!-- Ne pas oublier d'animer le coeur-->
+        <img class="restaurant_banner" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">   <!-- Entête image -->
+        <section class="menu">   <!-- Le menu -->
+            <div class="menu__title">
+                <h1 class="menu__title__restaurant">La palette du goût</h1>
+                <img class="menu__title__empty" src="../assets/images/icons/EmptyHeart.svg">
+                <input type="checkbox" class="menu__title__heart">
+                    <img class="menu__title__heart__full" src="../assets/images/icons/FullHeart.svg">
+                </a>
+            </div>
+            <article class="menu__list">
+                <h2 class="menu__list__type">ENTRÉES</h2>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Fricassée d'escargots</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Au piment d'Espelette</p>
+                        <p class="menu__list__container__box__price">25€</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Foie gras de canard mi-cuit</h3>
-                    <div>
-                        <p>Et ses copeaux de truffe noire</p>
-                        <p>35€</p>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Foie gras de canard mi-cuit</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Et ses copeaux de truffe noire</p>
+                        <p class="menu__list__container__box__price">35€</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Œuf au plat</h3>
-                    <div>
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
-                        <p>20€</p>
-                    </div>
-                </div>
-            </article>
-            <article>
-                <h2>Plats</h2>
-                <div>
-                    <h3>Filet de bœuf aux herbes</h3>
-                    <div>
-                        <p>Accompagné de sa ribambelle de légumes</p>
-                        <p>40€</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>Parmentier de queue de bœuf</h3>
-                    <div>
-                        <p>À la truffe noire sur sa purée de panais</p>
-                        <p>35€</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>Filet de turbot</h3>
-                    <div>
-                        <p>Aux agrumes</p>
-                        <p>44€</p>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Œuf au plat</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Assaisonné à la truffe sur lit de caviar</p>
+                        <p class="menu__list__container__box__price">20€</p>
                     </div>
                 </div>
             </article>
-            <article>
-                <h2>Desserts</h2>
-                <div>
-                    <h3>Paris-Brest</h3>
-                    <div>
-                        <p>Revisité</p>
-                        <p>18€</p>
+            <article class="menu__list">
+                <h2 class="menu__list__type">PLATS</h2>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Filet de bœuf aux herbes</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Accompagné de sa ribambelle de légumes</p>
+                        <p class="menu__list__container__box__price">40€</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Macaron au chocolat d'exception</h3>
-                    <div>
-                        <p>Et glace à la vanille de Madagascar</p>
-                        <p>22€</p>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Parmentier de queue de bœuf</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">À la truffe noire sur sa purée de panais</p>
+                        <p class="menu__list__container__box__price">35€</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Mousse au chocolat</h3>
-                    <div>
-                        <p>Au piment d'Espelette et à la truffe noire</p>
-                        <p>23€</p>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Filet de turbot</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Aux agrumes</p>
+                        <p class="menu__list__container__box__price">44€</p>
                     </div>
                 </div>
             </article>
-            <button>Commander</button>
+            <article class="menu__list">
+                <h2 class="menu__list__type">DESSERTS</h2>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Paris-Brest</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Revisité</p>
+                        <p class="menu__list__container__box__price">18€</p>
+                    </div class="menu__list__container">
+                </div>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Macaron au chocolat d'exception</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Et glace à la vanille de Madagascar</p>
+                        <p class="menu__list__container__box__price">22€</p>
+                    </div>
+                </div>
+                <div class="menu__list__container">
+                    <h3 class="menu__list__container__dishname">Mousse au chocolat</h3>
+                    <div class="menu__list__container__box">
+                        <p class="menu__list__container__box__dishsubname">Au piment d'Espelette et à la truffe noire</p>
+                        <p class="menu__list__container__box__price">23€</p>
+                    </div>
+                </div>
+            </article>
+            <button type="button" class="menu__button">Commander</button>
         </section>
     </main>
 
-    <footer>
-        <h2>ohmyfood</h2>
-        <div>
-            <a href="#">Proposer un restaurant</a>
-            <a href="#">Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="mailto:#">Contact</a>
+    <footer class="footer">
+        <h2 class="footer__title">ohmyfood</h2>
+        <div class="footer__list">
+            <div class="footer__list__container">
+                <i class="fa-solid fa-utensils footer__list__container__icon"></i>
+                <a class="footer__list__container2__link" href="#">Proposer un restaurant</a>
+            </div>
+            <div class="footer__list__container2">
+                <i class="fa-solid fa-handshake-angle footer__list__container2__icon"></i>
+                <a class="footer__list__container2__link" href="#">Devenir partenaire</a>
+            </div>
+            <a class="footer__list__link" href="#">Mentions légales</a>
+            <a class="footer__list__link" href="mailto:#">Contact</a>
         </div>
     </footer>
 </body>

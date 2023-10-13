@@ -15,92 +15,163 @@
 <body>
     <header class="header">
         <a class="header__arrow" href="../index.html">
-            <img src="../assets/images/icons/ReturnArrow.svg">   <!-- Ajouter la fleche pour retourner sur la page index, le menu est-il une popup? Ou bien une nouvelle page ouverte? -->
+            <img src="../assets/images/icons/ReturnArrow.svg" alt="Flèche de retour">
         </a>
         <img class="header__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
     </header>
 
-    <main>  <!-- Ne pas oublier d'animer le coeur-->
+    <main>
         <img class="restaurant_banner" src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">  <!-- Entête image -->
         <section class="menu">   <!-- Le menu -->
             <div class="menu__title">
                 <h1 class="menu__title__restaurant">À la française</h1>
-                <img class="menu__title__empty" src="../assets/images/icons/EmptyHeart.svg">
+                <img class="menu__title__empty" src="../assets/images/icons/EmptyHeart.svg" alt="Favoris décoché">
                 <input type="checkbox" class="menu__title__heart">
-                    <img class="menu__title__heart__full" src="../assets/images/icons/FullHeart.svg">
-                </a>
+                <img class="menu__title__heart__full" src="../assets/images/icons/FullHeart.svg" alt="Favoris coché">
             </div>
-            <article class="menu__list">
+            <article class="menu__list menu__appetizer">
                 <h2 class="menu__list__type">ENTRÉES</h2>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Tartare de poulpe acidulé</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Aux zestes d'orange</p>
-                        <p class="menu__list__container__box__price">25€</p>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Tartare de poulpe acidulé</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Aux zestes d'orange</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">25€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Velouté de légumes d'antan</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Carotte, panais, topinambour</p>
-                        <p class="menu__list__container__box__price">35€</p>
+                </article>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Velouté de légumes d'antan</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Carotte, panais, topinambour</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">35€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Soupe à l'oignon</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Revisitée</p>
-                        <p class="menu__list__container__box__price">20€</p>
+                </article>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Soupe à l'oignon</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Revisitée</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">20€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
+                </article>
             </article>
-            <article class="menu__list">
+            <article class="menu__list menu__main-course">
                 <h2 class="menu__list__type">PLATS</h2>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Coquilles Saint-Jacques</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Accompagnées d'une purée de panais</p>
-                        <p class="menu__list__container__box__price">40€</p>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Coquilles Saint-Jacques</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Accompagnées d'une purée de panais</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">40€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Magret de canard</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Et parmentier de pommes de terre</p>
-                        <p class="menu__list__container__box__price">35€</p>
+                </article>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Magret de canard</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Et parmentier de pommes de terre</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">35€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Pigeonneau d’Ille-et-Vilaine</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Sur son lit de gnocchis aux légumes</p>
-                        <p class="menu__list__container__box__price">44€</p>
+                </article>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Pigeonneau d’Ille-et-Vilaine</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Sur son lit de gnocchis aux légumes</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">44€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
+                </article>
             </article>
-            <article class="menu__list">
+            <article class="menu__list menu__dessert">
                 <h2 class="menu__list__type">DESSERTS</h2>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Pétales de violettes glacés</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Et purée de noisettes</p>
-                        <p class="menu__list__container__box__price">18€</p>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Pétales de violettes glacés</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Et purée de noisettes</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">18€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Fondant au chocolat</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Revisité</p>
-                        <p class="menu__list__container__box__price">22€</p>
+                </article>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Fondant au chocolat</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Revisité</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">22€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
-                <div class="menu__list__container">
-                    <h3 class="menu__list__container__dishname">Millefeuille croustillant</h3>
-                    <div class="menu__list__container__box">
-                        <p class="menu__list__container__box__dishsubname">Myrtilles et pâte d’amande</p>
-                        <p class="menu__list__container__box__price">23€</p>
+                </article>
+                <article class="menu__list__article">
+                    <div class="menu__list__article__container">
+                        <div class="menu__list__article__container__nameprice">
+                            <div class="menu__list__article__container__nameprice__box">
+                                <h3 class="menu__list__article__container__nameprice__box__dishname">Millefeuille croustillant</h3>
+                                <p class="menu__list__article__container__nameprice__box__dishsubname">Myrtilles et pâte d’amande</p>
+                            </div>
+                            <p class="menu__list__article__container__nameprice__price">23€</p>
+                        </div>
+                        <div class="menu__list__article__container__checkbox">
+                            <input type="checkbox" class="menu__list__article__container__checkbox__check">
+                            <img src="../assets/images/icons/Check.svg" alt="Check" class="menu__list__article__container__checkbox__check__checkimg">
+                        </div>
                     </div>
-                </div>
+                </article>
             </article>
             <button type="button" class="menu__button">Commander</button>
         </section>

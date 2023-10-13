@@ -137,6 +137,18 @@ main {
     opacity: 1;
   }
 }
+.menu__title__heart:not(:checked) + .menu__title__heart__full {
+  animation: unfill 300ms ease both;
+}
+@keyframes unfill {
+  0% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .menu__title__heart__full {
   position: absolute;
   right: 39px;

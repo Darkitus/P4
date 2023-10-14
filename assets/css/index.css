@@ -29,15 +29,20 @@ main {
 
 /* Loader */
 .loader {
+  background-color: white;
   position: fixed;
   text-align: center;
   height: 100%;
   width: 100%;
-  animation: hide 3s forwards;
+  z-index: 2;
+  animation: hide 2s forwards;
 }
 @keyframes hide {
   0% {
     opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
@@ -51,7 +56,7 @@ main {
   font-weight: 500;
   margin-top: 30vh;
   color: var(--main-color);
-  animation: loading 500ms ease-in-out 500ms 5 forwards;
+  animation: loading 500ms ease-in-out 500ms 3 forwards;
 }
 .loader__img {
   background: linear-gradient(var(--main-color), var(--tertiary-color), var(--secondary-color));
@@ -59,7 +64,7 @@ main {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  animation: loading 500ms ease-in-out 500ms 5 forwards;
+  animation: loading 500ms ease-in-out 500ms 3 forwards;
 }
 @keyframes loading {
   0% {

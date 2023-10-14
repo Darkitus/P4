@@ -122,7 +122,7 @@ main {
   right: 39px;
   height: 21px;
   width: 23px;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
 }
 .menu__title__heart:checked + .menu__title__heart__full {
@@ -142,7 +142,7 @@ main {
 }
 @keyframes unfill {
   0% {
-    transform: scale(1.1);
+    transform: scale(1);
     opacity: 1;
   }
   100% {
@@ -153,6 +153,20 @@ main {
   position: absolute;
   right: 39px;
   opacity: 0;
+}
+.menu__title__heartload {
+  position: absolute;
+  right: 39px;
+  z-index: 1;
+  animation: heartload 1s ease forwards;
+}
+@keyframes heartload {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .menu__list {
   display: flex;
@@ -241,8 +255,8 @@ main {
     width: 0;
   }
   100% {
-    padding: 0 10px;
-    width: 30px;
+    padding: 0 20px;
+    width: 25px;
     height: 69px;
     opacity: 1;
   }
@@ -252,8 +266,8 @@ main {
 }
 @keyframes unslide {
   0% {
-    padding: 0 10px;
-    width: 30px;
+    padding: 0 20px;
+    width: 25px;
     height: 69px;
     opacity: 1;
   }
@@ -278,6 +292,11 @@ main {
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   margin-bottom: 40px;
+}
+.menu__button:hover {
+  filter: brightness(1.12);
+  transition: all 1s ease-out;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 /* Footer */
@@ -356,6 +375,10 @@ main {
   .menu__title__heart__full {
     position: relative;
     right: 23px;
+  }
+  .menu__title__heartload {
+    position: relative;
+    right: 46px;
   }
   .menu__list__type {
     left: 10%;

@@ -20,25 +20,6 @@ body, h1, h2, h3, p, input {
 
 body {
     background-color: var(--background-color);
-    animation: fade 6s ease forwards;
-    @keyframes fade {
-        0% {
-            opacity: 0.05;
-            overflow: hidden;
-        }
-        30% {
-            opacity: 0.7;
-        }
-        60% {
-            opacity: 0.9;
-        }
-        90% {
-            opacity: 1;
-        }
-        100% {
-            overflow: unset;
-        }
-    }
 }
 
 main {
@@ -321,7 +302,7 @@ main {
                 bottom: 29px;
                 height: 21px;
                 width: 23px;
-                z-index: 1;
+                z-index: 2;
                 opacity: 0;
                 &:checked + &__full {
                     animation: fill 300ms ease both;
@@ -339,7 +320,7 @@ main {
                     animation: unfill 300ms ease both;
                     @keyframes unfill {
                         0% {
-                            transform: scale(1.1);
+                            transform: scale(1);
                             opacity: 1;
                         }
                         100% {                           
@@ -352,6 +333,22 @@ main {
                     position: absolute;
                     right: 19px;
                     bottom: 29px;
+                }
+            }
+            &__heartload {
+                position: absolute;
+                right: 19px;
+                bottom: 29px;
+                z-index: 1;
+                filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(1000deg) brightness(100%) contrast(100%);
+                animation: heartload 1s ease forwards;
+                @keyframes heartload {
+                    0% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
                 }
             }
         }

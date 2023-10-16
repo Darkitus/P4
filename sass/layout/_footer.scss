@@ -1,0 +1,83 @@
+@use '../_mixins';
+
+.footer {
+    @include mixins.flex-column;
+    background-color: #353535;
+    padding: 22px;
+    gap: 16px;
+    &__title {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1.125em;
+        font-weight: 400;
+        color: #FFFFFF;
+    }
+    &__list {
+        @include mixins.flex-column;
+        gap: 7px;
+        &__container {
+            display: flex;
+            gap: 11px;
+            &__icon {
+                @include mixins.flex-alignitems-center;
+                font-size: 14px;
+                color: #FFFFFF;
+            }
+            &__link {
+                font-size: 1em;
+                font-weight: 500;
+                color: #FFFFFF;
+                position: relative;
+                z-index: 1;
+            }
+        }
+        &__container2 {
+            display: flex;
+            gap: 11px;
+            &__icon {
+                @include mixins.flex-alignitems-center;
+                font-size: 10px;
+                color: #FFFFFF;
+            }
+            &__link {
+                font-size: 1em;
+                font-weight: 500;
+                color: #FFFFFF;
+                position: relative;
+                z-index: 1;
+            }
+        }
+        &__link {
+            @include mixins.flex-column;
+            font-size: 1em;
+            font-weight: 400;
+            color: #FFFFFF;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+/****** Media queries ***********/
+/* Large devices (laptop, higher than 1080px) */
+@media (min-width: 1100px) {
+    .footer {
+        height: 74px;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding-right: 50px;
+        &__list {
+            flex-direction: row;
+            &__container {
+                width: 190px;
+            }
+            &__container2 {
+                width: 168px;
+                align-items: center;
+                padding-right: 20px;
+            }
+            &__link {
+                width: 130px;
+            }
+        }
+    }
+}

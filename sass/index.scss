@@ -1,3 +1,8 @@
+/* Use */
+@use '../sass/layout/footer';
+@use '../sass/_mixins';
+
+
 /* Reset */
 body, h1, h2, h3, p, input {
     margin: 0;
@@ -23,8 +28,7 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flex-column;
     align-items: center;
 }
 
@@ -89,12 +93,10 @@ main {
 }
 
 
-/* Header */
 .header {
+    @include mixins.justify-alignitems-center;
     background-color: #FFFFFF;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 63px;
     position: relative;
     box-shadow: 0px 2px 4px 0px #00000026;
@@ -107,10 +109,9 @@ main {
 
 /* Location */
 .location {
+    @include mixins.justify-alignitems-center;
     background-color: #EAEAEA;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     width: 100%;
     height: 50px;
@@ -133,10 +134,8 @@ main {
 
 /* Heading */
 .heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include mixins.justify-alignitems-center;
+    @include mixins.flex-column;
     height: 287px;
     gap: 20px;
     &__title {
@@ -174,9 +173,8 @@ main {
 
 /* Step */
 .step {
+    @include mixins.flex-column;
     background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 400px;
     gap: 25px;
@@ -188,19 +186,16 @@ main {
         padding-left: 20px;
     }
     &__list {
-        display: flex;
-        flex-direction: column;
+        @include mixins.flex-column;
         gap: 25px;
         &__card {
+            @include mixins.justify-alignitems-center;
             display: flex;
-            justify-content: center;
-            align-items: center;
             &__num {
+                @include mixins.justify-alignitems-center;
                 background-color: var(--main-color);
                 color: #FFFFFF;
                 display: flex;
-                align-items: center;
-                justify-content: center;
                 font-size: 0.886em;
                 font-weight: 500;
                 width: 24px;
@@ -210,9 +205,8 @@ main {
                 z-index: 1;
             }
             &__container {
+                @include mixins.flex-alignitems-center;
                 background-color: var(--background-color);
-                display: flex;
-                align-items: center;
                 gap: 25px;
                 border-radius: 20px;
                 width: 322px;
@@ -238,8 +232,7 @@ main {
     
 /* Restaurants */
 .restaurants {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flex-column;
     gap: 24px;
     padding-bottom: 60px;
     &__title {
@@ -248,8 +241,7 @@ main {
         padding: 50px 0 0 20px;
     }
     &__list {
-        display: flex;
-        flex-direction: column;
+        @include mixins.flex-column;
         gap: 18px;
         padding: 0 18px;
         &__card {
@@ -259,8 +251,7 @@ main {
             height: 251px;
             width: 340px;
             &__link {
-                display: flex;
-                flex-direction: column;
+                @include mixins.flex-column;
                 height: 100%;
                 &__img {
                     border-radius: 15px 15px 0 0;
@@ -283,14 +274,12 @@ main {
                     right: 4%;
                 }
                 &__container {
-                    display: flex;
+                    @include mixins.flex-alignitems-center;
                     justify-content: space-between;
-                    align-items: center;
                     height: 100%;
                     padding: 0 25px 0 13px;
                     &__textbox {
-                        display: flex;
-                        flex-direction: column;
+                        @include mixins.flex-column;
                         &__title {
                             font-size: 1.125em;
                             font-weight: 700;
@@ -368,68 +357,6 @@ main {
 }
 
 
-/* Footer */
-.footer {
-    background-color: #353535;
-    display: flex;
-    flex-direction: column;
-    padding: 22px;
-    gap: 16px;
-    &__title {
-        font-family: 'Shrikhand', sans-serif;
-        font-size: 1.125em;
-        font-weight: 400;
-        color: #FFFFFF;
-    }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        &__container {
-            display: flex;
-            gap: 11px;
-            &__icon {
-                display: flex;
-                align-items: center;
-                font-size: 14px;
-                color: #FFFFFF;
-            }
-            &__link {
-                font-size: 1em;
-                font-weight: 500;
-                color: #FFFFFF;
-                position: relative;
-                z-index: 1;
-            }
-        }
-        &__container2 {
-            display: flex;
-            gap: 11px;
-            &__icon {
-                display: flex;
-                align-items: center;
-                font-size: 10px;
-                color: #FFFFFF;
-            }
-            &__link {
-                font-size: 1em;
-                font-weight: 500;
-                color: #FFFFFF;
-                position: relative;
-                z-index: 1;
-            }
-        }
-        &__link {
-            display: flex;
-            flex-direction: column;
-            font-size: 1em;
-            font-weight: 400;
-            color: #FFFFFF;
-            position: relative;
-            z-index: 1;
-        }
-    }
-}
 
 
 
@@ -495,26 +422,6 @@ main {
                         object-position: 0 68%;
                     }
                 }
-            }
-        }
-    }
-    .footer {
-        height: 74px;
-        flex-direction: row-reverse;
-        align-items: flex-end;
-        padding-right: 50px;
-        &__list {
-            flex-direction: row;
-            &__container {
-                width: 190px;
-            }
-            &__container2 {
-                width: 168px;
-                align-items: center;
-                padding-right: 20px;
-            }
-            &__link {
-                width: 130px;
             }
         }
     }
